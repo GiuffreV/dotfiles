@@ -1,5 +1,7 @@
 #!/bin/bash
 
+user=$(whoami)
+
 echo "Configurando starship || Setting up starship..."
 sudo cp -r starship.toml /home/$user/.config/starship.toml
 sleep 1
