@@ -2,6 +2,10 @@
 
 user=$(whoami)
 
+(waybar &) && (hyprpaper &) &&  (neofetch &) &&
+sleep 1
+killall hyprpaper waybar
+
 echo "Configurando starship || Setting up starship..."
 sudo cp -r starship.toml /home/$user/.config/starship.toml
 sleep 1
@@ -28,4 +32,9 @@ echo "Configurando rofi  || Setting up folder..."
 sudo cp -r rofi /home/$user/.config/rofi
 sleep 1
 
-echo "You're all set"
+(hyprpaper &) && (waybar &) &&
+sleep 1
+echo "Youre all set"
+exit
+
+
