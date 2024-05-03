@@ -1,11 +1,5 @@
 #!/bin/bash
 
-user=$(whoami)
-
-sudo pacman -Syu ttf-font-awesome sddm neofetch lf hyprland kitty rofi qt5-wayland dunst xdg-desktop-portal-hyprland qt6-wayland hyprpaper waybar pipewire pipewire-audio pipewire-alsa pipewire-pulse spotify-launcher firefox vscode nano
-curl -sS https://starship.rs/install.sh | sh
-
-sleep 1
 echo "Configurando starship || Setting up starship..."
 sudo cp -r starship.toml /home/$user/.config/starship.toml
 sleep 1
@@ -32,4 +26,4 @@ echo "Configurando rofi  || Setting up folder..."
 sudo cp -r rofi /home/$user/.config/rofi
 sleep 1
 
-echo "To finish installation become root with (sudo su), and execute sudosu.sh"
+echo "You're all set"
