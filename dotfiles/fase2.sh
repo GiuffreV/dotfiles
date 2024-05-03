@@ -1,7 +1,5 @@
 #!/bin/bash
 
-user=$(whoami)
-
 echo "Configurando waybar || Configurating waybar..."
 sudo cp -r waybar/config.jsonc /etc/xdg/waybar/config.jsonc
 sudo cp -r waybar/style.css /etc/xdg/waybar/style.css

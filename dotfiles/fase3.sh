@@ -11,6 +11,7 @@ sudo cp -r starship.toml /home/$user/.config/starship.toml
 sleep 1
 
 echo "Configurando sddm || Setting up sddm"
+sudo git clone https://github.com/lll2yu/sddm-lain-wired-theme
 sudo cp -r sddm-lain-wired-theme /usr/share/sddm/themes
 sudo cp -r sddm.conf /etc/sddm.conf
 
@@ -37,6 +38,15 @@ echo "Configurando rofi  || Setting up folder..."
 sudo cp -r rofi /home/$user/.config/rofi
 sleep 1
 
+echo "Instalando yay || Installing yay"
+sudo git clone https://aur.archlinux.org/yay.git
+sudo chown -R $user:$user yay
+cd yay
+makepkg -si
+cd ..
+sleep 1
+
+echo "Iniciando hyprpaper y waybar || Starting hyprpaper and waybar"
 (hyprpaper &) && (waybar &) &&
 sleep 1
 echo "Youre all set"
