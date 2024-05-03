@@ -10,6 +10,11 @@ echo "Configurando starship || Setting up starship..."
 sudo cp -r starship.toml /home/$user/.config/starship.toml
 sleep 1
 
+echo "Configurando sddm || Setting up sddm"
+sudo cp -r sddm-lain-wired-theme /usr/share/sddm/themes
+sudo cp -r sddm.conf /etc/sddm.conf
+
+
 echo "Configurando .bashrc || Setting up .bashrc..."
 sudo cp -r .bashrc /home/$user/.bashrc
 sleep 1
